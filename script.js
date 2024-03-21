@@ -23,8 +23,8 @@ async function fetchPokemonData() {
 }
 
 // Function to create Pokémon cards
+pokedex.innerHTML = "";
 function createPokemonCards(pokemons) {
-    pokedex.innerHTML = "";
   pokemons.forEach((pokemon, index) => {
     const card = document.createElement("div");
     card.classList.add("card");
