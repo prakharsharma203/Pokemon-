@@ -1,0 +1,213 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+.filters {
+  margin-top: 20px;
+}
+
+select, button {
+  padding: 15px 60px;
+  margin: 5px;
+  border-radius: 10px;
+  border: none;
+  background-color: rgb(212, 59, 54);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+select option{
+background-color: rgb(212, 59, 54);
+cursor: pointer;
+}
+select {
+appearance: none;
+-webkit-appearance: none;
+-moz-appearance: none;
+}
+input{
+padding: 15px 100px; 
+margin-top: 20px; 
+border-radius: 10px;
+background-color: rgb(212, 59, 54);
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+border: none;
+color: white;
+font-size: 1.2rem;
+font-weight: 600;
+text-align: center;
+text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+input::placeholder{
+color: white;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  margin: 20px;
+}
+
+.card {
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 4px 5px 8px rgba(0, 0, 0, 0.7);
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+  transition: transform 1.5s;
+  perspective: 1000px;
+  font-size: 14px;
+  position: relative;
+  margin-top: 20px;
+}
+
+.card:hover {
+  transform: rotateY(180deg);
+}
+
+.card .info {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.card h3 {
+  padding: 10px 0;
+  font-size: 20px;
+  color: black;
+  text-transform: uppercase;
+}
+
+.card ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  color: black;
+}
+
+.card li {
+  margin: 5px 0;
+  color: black;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.card:hover .info {
+  display: block;
+}
+
+.card .front {
+z-index: 2;
+transform: rotateY(0deg);
+display: block;
+}
+
+.card .back {
+transform: rotateY(180deg);
+display: none;
+}
+
+.card:hover .front {
+display: none;
+}
+
+.card:hover .back {
+display: block;
+}
+#no-results {
+  color: #f44336;
+  font-weight: bold;
+  display: none;
+}
+.card-number {
+font-weight: bold;
+color: #000000; 
+background-color: #ffffff; 
+padding: 3px 10px; 
+border-radius: 2px;
+}
+/*  color of cards according to it's type */
+.card.grass {
+background-color: #4caf50; /* Green for grass type */
+}
+.card.fire {
+background-color: #f3514f; /* Red for fire type */
+}
+
+.card.water{
+background-color:#6bb5f1; /* Blue for water type */
+}
+.card.bug{
+background-color:#679f69; /* Green for bug type */
+}
+.card.normal{
+background-color:#88634d; /* Brown for normal type */
+}
+.card.poison{
+background-color:rgb(147, 79, 147); /* Purple for poison type */
+}
+.card.electric{
+background-color:yellow; /* Yellow for electric type */
+}
+.card.ground{
+background-color:peru; /* wood for ground type */
+}
+.card.fairy{
+background-color:#ee9ca7; /* Pink for fairy type */
+}
+.card.fighting{
+background-color:rgb(163, 114, 65); /* wood for fighting type */
+}
+.card.psychic{
+background-color:rgb(181, 40, 181); /* Light purple for psychic type */
+}
+.card.rock{
+background-color:rgb(229, 163, 97); /* light yellow for rock type */
+}
+.card.ghost{
+background-color:purple; /* purple for ghost type */
+}
+.card.ice{
+background-color:#6bb5f1; /* Light blue for ice type */
+}
+.card.dragon{
+background-color:saddlebrown; /* Brown for dragon type */
+}
+@media screen and (max-width: 1024px) {
+h1 {
+  font-size: 3rem;
+}
+}
+@media screen and (max-width: 768px) {
+.card {
+  width: 100%;
+  max-width: 350px;
+}
+h1 {
+  font-size: 2.8rem;
+}
+}
+@media screen and (max-width: 475px) {
+h1 {
+  font-size: 1.8rem;
+}
+}
+@media screen and (max-width: 350px) {
+h1 {
+  font-size: 1.4rem;
+}
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokemon</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <img src="https://i.pinimg.com/736x/6d/b5/37/6db5375049badafb8f88e36570dc74f6.jpg" alt="" style="height: 100px; width: 100px;">
+    <img src="https://logos-world.net/wp-content/uploads/2020/05/Pokemon-Logo.png" alt="" style="height: 200px; width: 450px;">
+    <img src="https://i.pinimg.com/736x/6d/b5/37/6db5375049badafb8f88e36570dc74f6.jpg" alt="" style="height: 100px; width: 100px;">
+    <div class="filters">
+      <select id="type-filter">
+        <option value="" selected="" disabled="">Types</option>
+        <option value="grass">Grass</option>
+        <option value="fire">Fire</option>
+        <option value="water">Water</option>
+        <option value="bug">Bug</option>
+        <option value="normal">Normal</option>
+        <option value="poison">Poison</option>
+        <option value="electric">Electric</option>
+        <option value="ground">Ground</option>
+        <option value="fairy">Fairy</option>
+        <option value="fighting">Fighting</option>
+        <option value="psychic">Psychic</option>
+        <option value="rock">Rock</option>
+        <option value="ghost">Ghost</option>
+        <option value="ice">Ice</option>
+        <option value="dragon">Dragon</option>
+      </select>
+      <button id="filter-button">Filter by Type</button>
+      <button id="reset-button">Reset</button>
+    </div>
+    <div class="search">
+      <input type="text" id="search-input" placeholder="Enter Pokémon Name" />
+    </div>
+    <section id="pokedex" class="grid"></section>
+    <script src="script.js"></script>
+  </body>
+</html>
